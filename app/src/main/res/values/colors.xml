@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="colorWhite">#ffffffff</color>
+    <color name="colorBlack">#000000</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="backgroud_color">#ffffff</color>
+    <color name="front_black">#333333</color>
+    <color name="front_white">#FFFFFF</color>
+    <color name="front_blue">#3cacec</color>
+    <color name="video_gray">#20224559</color>
+    <color name="front_input">#555555</color>
+    <color name="menu_front">#ffffff</color>
+    <color name="tab_tag_text_focus">#ff00e4ff</color>
+    <color name="gray">#ff7d7d7d</color>
+    <color name="white">#ffffffff</color>
+    <color name="front_black_d">#242424</color>
+
+    <color name="login_border_color">#ffc8c7cc</color>
+    <!--<color name="backgroud_color">#ffffffff</color>-->
+    <color name="bg_common_color">#fff5f5f5</color>
+    <color name="ez_login_text_color">#ff848484</color>
+    <color name="top_color">#ca2c32</color>
+    <color name="main_category_first_bg">#92877C</color>
+    <color name="main_category_textview_selected">#44111111</color>
+    <color name="splite_line_color">#ffc6c6c6</color>
+    <color name="skate_bright_color">#ff27bdbe</color>
+    <color name="skate_dark_color">#ffbfbfbf</color>
+    <color name="channel_list_divider_color">#ffe0e0e0</color>
+    <color name="live_view_item_text_color">#ff404040</color>
+    <color name="channel_back">#eeeeed</color>
+    <color name="bg_title_color">#ffca2c32</color>
+    <color name="channel_time_text_nor">#ff686868</color>
+    <color name="black_disable_color">#99333333</color>
+    <color name="splite_text_color">#ff333333</color>
+    <color name="btn_login">#ca2c32</color>
+    <color name="btn_login_h">#ca2c55</color>
+
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="result_view">#b0000000</color>
+
+    <color name="front_state_n">#3d3d3d</color>
+    <color name="front_state_h">#292929</color>
+</resources>

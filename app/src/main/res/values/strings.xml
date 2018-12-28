@@ -1,0 +1,138 @@
+<resources>
+    <string name="app_name">jvt_v</string>
+
+    <string name="exit">Exit</string>
+    <string name="positive">OK</string>
+    <string name="negative">Cancel</string>
+    <string name="exit_info">Are you sure to exit?</string>
+    <string name="connectserverfail">Connect fail</string>
+
+    <!-- add device -->
+    <string name="local_search">Local Search</string>
+    <string name="add_erweima">Scan QR code</string>
+    <string name="set_wifi">WIFI intelligent quick match </string>
+    <string name="save">save</string>
+
+    <string name="streamtype">Stream:</string>
+    <string name="streamtype1">Stream</string>
+    <string name="maintype">Main</string>
+    <string name="subtype">Sub</string>
+
+    <string name="single_way">Single ch</string>
+    <string name="multichannel">Multi ch</string>
+
+    <string name="userid">User ID:</string>
+    <string name="password">Password:</string>
+    <string name="port">Port:</string>
+    <string name="search_ip">IP：</string>
+    <string name="device_vendor">Producer:</string>
+    <string name="umid">Serial:</string>
+    <string name="user_alias">Alias：</string>
+    <string name="add_p2p">Serial</string>
+    <string name="add_dirctor">IP/Domain</string>
+    <string name="add_device">Add Device</string>
+
+    <string name="modify_success">Successfully modified</string>
+    <string name="modify_connect_fail">Can not connect server,fail to modify</string>
+
+    <string name="add_success">Add success</string>
+    <string name="add_failed">Add failed</string>
+    <string name="delete_failed">Delete failed</string>
+    <string name="modify_failed">Modify failed</string>
+
+    <!--dev manager-->
+    <string name="main_category_device_manage">Device Manage</string>
+
+    <string name="alarminfo_equipment">Equipment trouble</string>
+    <string name="alarminfo_video_cover">Video cover</string>
+    <string name="alarminfo_video_lose">Video lose</string>
+    <string name="alarminfo_probe">Probe alarm</string>
+    <string name="black_list_alarm">blacklist alarm</string>
+    <string name="white_list_alarm">whitelist alarm</string>
+    <string name="no_white_black_list_alarm">non-whitelist alarm</string>
+    <string name="vip_list_alarm">Vip list alarm</string>
+    <string name="stranger_list_alarm">Stranger list alarm</string>
+    <string name="alarminfo_move">Moving detection</string>
+
+    <string name="about">About</string>
+    <string name="device_address">Address:</string>
+
+    <string name="modify_device_paramete">Connect parameters</string>
+
+    <!--Reference to authority-->
+    <string name="permission_tip">Prompt</string>
+    <string name="permission_cancer">Cance</string>
+    <string name="permission_setting">Setting</string>
+    <string name="permission_content">Please enable permissions in Settings-Applications-%1s to ensure that the app is running normally!</string>
+    <string name="permission_write">To ensure that this function is running properly, make sure that App has access to read and write cell phones!</string>
+    <string name="permission_call">To ensure that this function is running normally, make sure that App has the phone rights!</string>
+    <string name="permission_audio">To ensure that this function is running properly, make sure that App has a recording authority!</string>
+    <string name="permission_camrea">To ensure that this function is running properly, make sure that App has camera rights!</string>
+    <!--<string name="permisson_camrea_and_write">To ensure the normal operation of this function, please ensure that App has the camera and cell phone store read and write rights!</string>-->
+    <string name="permission_wifi">To ensure the normal use of the WIFI function, make sure that the mobile phone has location and WIFI privileges</string>
+
+    <string name="delete_tips">Do you want to delete this ?</string>
+    <string name="delete">Delete</string>
+    <string name="jmup">Jump</string>
+    <string name="jmup_tip">Fast jump</string>
+
+    <string name="dev_existent">The device or name already exists</string>
+    <string name="over_maxchannel">The channel number cannot exceed the maximum number of channels,Or it is not zero</string>
+    <string name="input_not_empty">The input can not be empty</string>
+    <string name="enter_user_name">Input your User name</string>
+    <string name="wifi_settings">WIFI settings</string>
+    <string name="wifi_device_name">Device name</string>
+    <string name="wifi_synac_to_device">Synchronous mobile WIFI to the device</string>
+    <string name="wifi_set_ip">Set IP</string>
+    <string name="wifi_enter_ssid">The WIFI SSID</string>
+    <string name="wifi_enter_pass">The WIFI password</string>
+    <string name="wifi_show_pass">Show password</string>
+    <string name="wifi_searching">Searching WIFI...</string>
+    <string name="wifi_tool_settings">WIFI Tool Settings</string>
+    <string name="next_step">Next</string>
+    <string name="wifi_tips_1">1/2.Input you Wi-Fi information</string>
+    <string name="wifi_tips_2">2/2.Scan the QR code using equipment</string>
+
+    <string name="wifi_get_failre">Get Wifi information failed</string>
+
+    <string name="ready">Ready</string>
+    <string name="sdcard_unavaible">SD card unavaible</string>
+    <string name="snap_fail">Can not access the SD card, snap failure</string>
+    <string name="image_save_in">Screenshot saved in</string>
+    <string name="video_save_in">Video saved in</string>
+
+    <string name="playing">Playing</string>
+    <string name="pause">Pause</string>
+    <string name="stop">Stop</string>
+    <string name="connect_success">Connect successfully</string>
+    <string name="connect_fail">Connecting failed</string>
+    <string name="connecting">Connecting</string>
+    <string name="buffering">Buffering</string>
+    <string name="usererro">Invalid User</string>
+    <string name="passworderro">Invalid Password</string>
+    <string name="NPC_D_MPI_MON_ERROR_REJECT_ACCESS">Insufficient permissions</string>
+
+    <string name="delete_success">Delete successfully</string>
+    <string name="device_off_line">device not online</string>
+
+    <string name="wifi_auto_get_ip">Auto get IP</string>
+
+    <string name="snap_similarity">Similarity：</string>
+    <string name="snap_name">Name：</string>
+    <string name="snap_number">No：</string>
+    <string name="snap_count">Visited Times：</string>
+    <string name="snap_sex">Sex：</string>
+    <string name="snap_age">Age：</string>
+    <string name="img_name">Name：</string>
+    <string name="img_no">Number：</string>
+
+    <string name="snap_vip">VIP</string>
+    <string name="snap_whitelist">WhiteList</string>
+    <string name="snap_blacklist">BlackList</string>
+    <string name="snap_remarks">remarks：</string>
+
+    <string name="nodataerro">No Data</string>
+    <string name="searching_device">Searching device...</string>
+
+
+</resources>

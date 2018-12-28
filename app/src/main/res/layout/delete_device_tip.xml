@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="190dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:background="@drawable/border_5_w"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:text="@string/permission_tip"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/front_black_d"
+            android:layout_height="50dp" />
+        <View android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:background="#dbdbdb"></View>
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:lineSpacingExtra="8dp"
+            android:paddingRight="15dp"
+            android:clickable="true"
+            android:paddingLeft="15dp"
+            android:text="@string/delete_tips"
+            android:textColor="@color/front_black_d"/>
+
+        <View android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:background="#dbdbdb"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="45dp">
+            <TextView
+                android:id="@+id/permission_cancel_btn"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/permission_cancer"
+                android:textSize="16sp"
+                android:textColor="@color/top_color"
+                 />
+            <View android:layout_height="match_parent"
+                android:layout_width="1dp"
+                android:background="#dbdbdb"></View>
+            <TextView
+                android:id="@+id/commit_btn"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/delete"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:textColor="@color/front_black_d" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

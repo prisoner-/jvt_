@@ -1,0 +1,522 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/top_color"
+        android:focusable="true" >
+
+        <TextView
+            android:id="@+id/title_name"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="@string/add_device"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back" />
+
+        <Button
+            android:id="@+id/btn_add_device_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/search_device"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp" >
+
+        <EditText
+            android:id="@+id/et_user_alias"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/input_bg_selecter"
+            android:inputType="text"
+            android:paddingLeft="115dp"
+            android:singleLine="true"
+            android:maxLength="32"
+            android:text="Device 01"
+            android:textColor="@color/front_input" />
+
+        <TextView
+            android:id="@+id/et1"
+            style="@style/input_show_name"
+            android:text="@string/user_alias" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/et1"
+            android:src="@drawable/iuput_divider" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_add"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <RadioButton
+            android:id="@+id/rb_p2p"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/add_device_choose_selector"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="@string/add_p2p"
+            android:textColor="@drawable/add_device_text_color" />
+
+        <RadioButton
+            android:id="@+id/rb_direct"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/add_device_choose_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/add_dirctor"
+            android:textColor="@drawable/add_device_text_color" />
+    </RadioGroup>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp">
+
+            <LinearLayout
+                android:id="@+id/l_add_p2P"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp">
+
+                    <EditText
+                        android:id="@+id/et_umid"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:maxLength="32"
+                        android:background="@drawable/input_bg_selecter"
+                        android:paddingLeft="115dp"
+                        android:singleLine="true"
+                        android:text="umkse5bbg3q9"
+                        android:textColor="@color/front_input" />
+
+                    <TextView
+                        android:id="@+id/et2"
+                        style="@style/input_show_name"
+                        android:text="@string/umid" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/et2"
+                        android:src="@drawable/iuput_divider" />
+
+                    <ImageButton
+                        android:id="@+id/erweima"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:visibility="gone"
+                        android:background="@drawable/add_device_erweima" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/l_add_direct"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/et_vendor"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/input_bg_selecter"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="115dp"
+                        android:textColor="@color/front_input" />
+
+                    <TextView
+                        android:id="@+id/et15"
+                        style="@style/input_show_name"
+                        android:text="@string/device_vendor" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/et15"
+                        android:src="@drawable/iuput_divider" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp">
+
+                    <EditText
+                        android:id="@+id/et_ip_address"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/input_bg_selecter"
+                        android:inputType="text"
+                        android:paddingLeft="115dp"
+                        android:textColor="@color/front_input" />
+
+                    <TextView
+                        android:id="@+id/et9"
+                        style="@style/input_show_name"
+                        android:text="@string/search_ip" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/et9"
+                        android:src="@drawable/iuput_divider" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp">
+
+                    <EditText
+                        android:id="@+id/et_port"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/input_bg_selecter"
+                        android:inputType="number"
+                        android:paddingLeft="115dp"
+                        android:text="5800"
+                        android:textColor="@color/front_input" />
+
+                    <TextView
+                        android:id="@+id/et10"
+                        style="@style/input_show_name"
+                        android:text="@string/port" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/et10"
+                        android:src="@drawable/iuput_divider" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp">
+
+                <EditText
+                    android:id="@+id/et_user_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/input_bg_selecter"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="115dp"
+                    android:maxLength="32"
+                    android:text="admin"
+                    android:textColor="@color/front_input" />
+
+                <TextView
+                    android:id="@+id/et4"
+                    style="@style/input_show_name"
+                    android:text="@string/userid" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/et4"
+                    android:src="@drawable/iuput_divider" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp">
+
+                <EditText
+                    android:id="@+id/et_user_password"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/input_bg_selecter"
+                    android:inputType="textPassword"
+                    android:paddingLeft="115dp"
+                    android:maxLength="32"
+                    android:textColor="@color/front_input" />
+
+                <TextView
+                    android:id="@+id/et5"
+                    style="@style/input_show_name"
+                    android:text="@string/password" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/et5"
+                    android:src="@drawable/iuput_divider" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_dvrORnvr"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/input_bg"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/et6"
+                    style="@style/input_show_name"
+                    android:layout_weight="1"
+                    android:text="@string/single_way" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <CheckBox
+                        android:id="@+id/ck_dvrORnvr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ck_toggle"
+                        android:button="@null"
+                        android:checked="false" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv6"
+                    style="@style/input_show_name"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/multichannel" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/dev_channel"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:visibility="gone"
+                android:background="@drawable/input_bg"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/rg_channel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/ck_oneC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ck_sixteenc"
+                        android:gravity="center"
+                        android:text="1" />
+
+                    <TextView
+                        android:id="@+id/ck_fourC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:background="@drawable/ck_sixteenc"
+                        android:gravity="center"
+                        android:text="4" />
+
+                    <TextView
+                        android:id="@+id/ck_eightC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:background="@drawable/ck_sixteenc"
+                        android:gravity="center"
+                        android:text="8" />
+
+                    <TextView
+                        android:id="@+id/ck_sixteenC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:background="@drawable/ck_sixteenc"
+                        android:gravity="center"
+                        android:text="16" />
+
+                    <TextView
+                        android:id="@+id/ck_24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:background="@drawable/ck_sixteenc"
+                        android:gravity="center"
+                        android:text="24" />
+
+                    <TextView
+                        android:id="@+id/ck_32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:background="@drawable/ck_sixteenc"
+                        android:gravity="center"
+                        android:text="32" />
+
+                    <TextView
+                        android:id="@+id/ck_64"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:background="@drawable/ck_sixteenc"
+                        android:gravity="center"
+                        android:text="64" />
+
+                    <TextView
+                        android:id="@+id/ck_128"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:background="@drawable/ck_sixteenc"
+                        android:gravity="center"
+                        android:text="128" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/et_stream"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/input_bg_selecter"
+                    android:gravity="center_vertical|right"
+                    android:paddingLeft="115dp"
+                    android:paddingRight="50dp"
+                    android:text="@string/maintype"
+                    android:textColor="@color/front_input"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/et7"
+                    style="@style/input_show_name"
+                    android:text="@string/streamtype" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/et7"
+                    android:src="@drawable/iuput_divider" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/item_arrow" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_add_device"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/top_color"
+                android:gravity="center"
+                android:text="@string/save"
+                android:textColor="@color/front_white"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btn_add_wifi"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/more_logout_btn"
+                android:gravity="center"
+                android:text="@string/set_wifi"
+                android:textColor="@color/front_white"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <Button
+                    android:layout_width="140dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/add_dev_erweima_selector"
+                    android:gravity="center"
+                    android:text="@string/add_erweima"
+                    android:textColor="@color/front_white"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:layout_width="140dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right"
+                    android:background="@drawable/login_btn"
+                    android:gravity="center"
+                    android:text="@string/local_search"
+                    android:textColor="@color/front_white"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
