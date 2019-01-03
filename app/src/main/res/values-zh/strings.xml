@@ -130,4 +130,7 @@
 
     <string name="nodataerro">无数据</string>
     <string name="searching_device">正在搜索设备...</string>
+
+    <string name="add_search_local_device">本地设备</string>
+
 </resources>

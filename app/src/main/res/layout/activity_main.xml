@@ -4,8 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg5"
     tools:context=".ui.activity.MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg5"
+        android:scaleType="centerCrop"
+        />
 
     <RelativeLayout
         android:id="@+id/frameLayout"
@@ -17,20 +23,22 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="80dp"
+        android:layout_width="100dp"
         android:layout_height="80dp"
         android:text="设备管理"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:textColor="@color/white"
+        android:background="@drawable/btn_bg_horiz"
+        />
 
     <Button
         android:id="@+id/btn_style"
-        android:layout_width="80dp"
+        android:layout_width="100dp"
         android:layout_height="80dp"
         android:text="single"
-        android:layout_alignParentRight="true"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:textColor="@color/white"
+        android:layout_below="@+id/button"
+        android:background="@drawable/btn_bg_horiz"
+        />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerview"

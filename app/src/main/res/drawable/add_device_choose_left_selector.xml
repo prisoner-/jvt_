@@ -2,6 +2,6 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:drawable="@android:color/transparent" android:state_checked="false"/>
-    <item android:drawable="@drawable/shape_btn_right_bg" android:state_checked="true"/>
+    <item android:drawable="@drawable/shape_btn_left_bg" android:state_checked="true"/>
 
 </selector>

@@ -2,13 +2,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroud_color"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="50dp"
         android:background="@color/top_color"
-        android:focusable="true" >
+        android:focusable="true">
 
         <TextView
             android:id="@+id/title_name"
@@ -34,16 +34,16 @@
             android:layout_centerVertical="true"
             android:layout_marginRight="10dp"
             android:background="@drawable/search_device"
-            android:visibility="gone"/>
+            android:visibility="visible" />
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="50dp"
-        android:layout_marginBottom="5dp"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="15dp" >
+        android:layout_marginBottom="5dp">
 
         <EditText
             android:id="@+id/et_user_alias"
@@ -51,10 +51,10 @@
             android:layout_height="50dp"
             android:background="@drawable/input_bg_selecter"
             android:inputType="text"
+            android:maxLength="32"
             android:paddingLeft="115dp"
             android:singleLine="true"
-            android:maxLength="32"
-            android:text="Device 01"
+            android:text=""
             android:textColor="@color/front_input" />
 
         <TextView
@@ -74,16 +74,19 @@
         android:id="@+id/rg_add"
         android:layout_width="fill_parent"
         android:layout_height="50dp"
-        android:background="@color/colorWhite"
+        android:background="@drawable/shape_empty_bg"
         android:orientation="horizontal"
-        android:weightSum="2" >
+        android:focusable="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:weightSum="2">
 
         <RadioButton
             android:id="@+id/rb_p2p"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:background="@drawable/add_device_choose_selector"
+            android:background="@drawable/add_device_choose_left_selector"
             android:button="@null"
             android:checked="true"
             android:gravity="center"
@@ -112,8 +115,8 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:paddingTop="5dp">
+            android:paddingTop="5dp"
+            android:paddingRight="10dp">
 
             <LinearLayout
                 android:id="@+id/l_add_p2P"
@@ -129,11 +132,11 @@
                         android:id="@+id/et_umid"
                         android:layout_width="fill_parent"
                         android:layout_height="50dp"
-                        android:maxLength="32"
                         android:background="@drawable/input_bg_selecter"
+                        android:maxLength="32"
                         android:paddingLeft="115dp"
                         android:singleLine="true"
-                        android:text="umkse5bbg3q9"
+                        android:text=""
                         android:textColor="@color/front_input" />
 
                     <TextView
@@ -155,8 +158,8 @@
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="10dp"
-                        android:visibility="gone"
-                        android:background="@drawable/add_device_erweima" />
+                        android:background="@drawable/add_device_erweima"
+                        android:visibility="gone" />
                 </RelativeLayout>
             </LinearLayout>
 
@@ -258,9 +261,9 @@
                     android:layout_height="50dp"
                     android:background="@drawable/input_bg_selecter"
                     android:inputType="textEmailAddress"
-                    android:paddingLeft="115dp"
                     android:maxLength="32"
-                    android:text="admin"
+                    android:paddingLeft="115dp"
+                    android:text=""
                     android:textColor="@color/front_input" />
 
                 <TextView
@@ -286,8 +289,8 @@
                     android:layout_height="50dp"
                     android:background="@drawable/input_bg_selecter"
                     android:inputType="textPassword"
-                    android:paddingLeft="115dp"
                     android:maxLength="32"
+                    android:paddingLeft="115dp"
                     android:textColor="@color/front_input" />
 
                 <TextView
@@ -344,9 +347,9 @@
                 android:id="@+id/dev_channel"
                 android:layout_width="fill_parent"
                 android:layout_height="50dp"
-                android:visibility="gone"
                 android:background="@drawable/input_bg"
-                android:gravity="center">
+                android:gravity="center"
+                android:visibility="gone">
 
                 <LinearLayout
                     android:id="@+id/rg_channel"
@@ -430,7 +433,8 @@
 
             <RelativeLayout
                 android:layout_width="fill_parent"
-                android:layout_height="50dp">
+                android:layout_height="50dp"
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/et_stream"
@@ -470,7 +474,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
-                android:background="@color/top_color"
+                android:background="@drawable/shape_btn_bg"
                 android:gravity="center"
                 android:text="@string/save"
                 android:textColor="@color/front_white"

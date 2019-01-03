@@ -1,6 +1,5 @@
 package com.jvt.ui.activity;
 
-import android.Manifest;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -29,6 +28,7 @@ import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
@@ -43,9 +43,6 @@ import com.jvt.MyApplication;
 import com.jvt.R;
 import com.jvt.bean.PlayNode;
 import com.jvt.bean.SearchDeviceInfo;
-import com.jvt.permission.PermissionCallback;
-import com.jvt.permission.PermissonUtils;
-import com.jvt.ui.activity.ZBar.CameraTestActivity;
 import com.jvt.ui.dialog.ShowProgress;
 import com.jvt.utils.AddThread;
 import com.jvt.utils.CommonData;
@@ -149,12 +146,15 @@ public class AddDevActivity extends BaseActivity implements android.widget.Radio
         titleName = (TextView) findViewById(R.id.title_name);
         View erweima = findViewById(R.id.erweima);
         View localSearch = findViewById(R.id.btn_add_device_search);
+        Button back=findViewById(R.id.back_btn);
+        RadioButton p2p=findViewById(R.id.rb_p2p);
+        RadioButton direct=findViewById(R.id.rb_direct);
 
-        // ͨ����
+        // d通道数
         singlech = (TextView) findViewById(R.id.et6);
         multich = (TextView) findViewById(R.id.tv6);
         CkdvrORnvr = (CheckBox) findViewById(R.id.ck_dvrORnvr);
-        dev_channel = (RelativeLayout) findViewById(R.id.dev_channel);// ͨ����ѡ�����
+        dev_channel = (RelativeLayout) findViewById(R.id.dev_channel);// 通道数选择面板
         lin_dvrORnvr = (LinearLayout) findViewById(R.id.lin_dvrORnvr);
         rg_channel = (LinearLayout) findViewById(R.id.rg_channel);
         ck_oneC = (TextView) findViewById(R.id.ck_oneC);
@@ -169,10 +169,30 @@ public class AddDevActivity extends BaseActivity implements android.widget.Radio
         /**
          * 测试用
          */
-        etumid.setText("umkse5bbg3q9");
-        etpassword.setText("admin.123");
-        streamType = 1;//子码流
-        tvstream.setText(getString(R.string.subtype));
+//        etumid.setText("umkse5bbg3q9");
+//        etpassword.setText("admin.123");
+//        streamType = 1;//子码流
+//        tvstream.setText(getString(R.string.subtype));
+
+        //返回键获取焦点，并设置下一个焦点
+        back.requestFocus();
+        back.setNextFocusRightId(R.id.btn_add_device_search);
+        back.setNextFocusDownId(R.id.et_user_alias);
+
+        localSearch.setNextFocusDownId(R.id.et_user_alias);
+        localSearch.setNextFocusLeftId(R.id.back_btn);
+
+        etalias.setNextFocusDownId(R.id.rb_p2p);
+        etalias.setNextFocusUpId(R.id.back_btn);
+
+        p2p.setNextFocusRightId(R.id.rb_direct);
+        p2p.setNextFocusDownId(R.id.et_umid);
+        p2p.setNextFocusUpId(R.id.et_user_alias);
+
+        direct.setNextFocusLeftId(R.id.rb_p2p);
+        direct.setNextFocusDownId(R.id.et_umid);
+        direct.setNextFocusUpId(R.id.et_user_alias);
+
 
         ck_oneC.setOnClickListener(this);
         ck_fourC.setOnClickListener(this);
@@ -254,7 +274,7 @@ public class AddDevActivity extends BaseActivity implements android.widget.Radio
             findViewById(R.id.rb_p2p).setClickable(false);
             findViewById(R.id.rb_direct).setClickable(false);
             erweima.setVisibility(View.GONE);
-            localSearch.setVisibility(View.GONE);
+            localSearch.setVisibility(View.VISIBLE);
             etuser.setText(info.pDevUser + "");
             etpassword.setText(info.pDevPwd + "");
         } else {
@@ -330,16 +350,17 @@ public class AddDevActivity extends BaseActivity implements android.widget.Radio
 //                PermissonUtils.getInstance().requestPermissions(AddDevActivity.this, permissionCallback, Manifest.permission.CAMERA);
 //            }
 //        });
-//		localSearch.setOnClickListener(new OnClickListener() {
-//
-//			@Override
-//			public void onClick(View v) {
-//				// TODO Auto-generated method stub
-//				startActivityForResult(new Intent(AddDevActivity.this, AcSearchDevice.class), 3);
-//
-//			}
-//		});
-        findViewById(R.id.back_btn).setOnClickListener(new OnClickListener() {
+		localSearch.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				startActivityForResult(new Intent(mContext, SearchActivity.class), 3);
+
+			}
+		});
+
+        back.setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -377,6 +398,7 @@ public class AddDevActivity extends BaseActivity implements android.widget.Radio
             etport.setText(searchInfo.iDevPort + "");
             etumid.setText(umid);
             etalias.setText(deviceName);
+            etuser.setText(searchInfo.sDevUserName);
             select(searchInfo.usChNum);
         }
     }

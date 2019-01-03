@@ -57,6 +57,7 @@
 
         <activity android:name=".ui.activity.MainActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -87,6 +88,9 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.activity.StreamSelectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SearchActivity"
             android:screenOrientation="portrait" />
     </application>
 

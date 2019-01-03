@@ -10,10 +10,14 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.OrientationHelper;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -42,6 +46,7 @@ import static com.jvt.ui.adapter.RecyclerUsersAdapter.TYPE_LIST;
  * Created by liaolei on 2018/12/18.
  */
 public class MainActivity extends BaseActivity {
+    private static final String TAG = "MainActivity LL Test";
 
     public static final int REQUEST_CODE = 1011;
 
@@ -132,6 +137,96 @@ public class MainActivity extends BaseActivity {
         recyclerView.setVisibility(layoutStyle == 1 ? View.VISIBLE : View.GONE);
         layout_single.setVisibility(layoutStyle == 0 ? View.VISIBLE : View.GONE);
     }
+
+    private long lastClickTime;
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+
+        switch (keyCode) {
+
+            case KeyEvent.KEYCODE_ENTER:     //确定键enter
+            case KeyEvent.KEYCODE_DPAD_CENTER:
+                Log.d(TAG, "enter--->");
+
+                break;
+
+            case KeyEvent.KEYCODE_BACK:    //返回键
+                Log.d(TAG, "back--->");
+                long l = System.currentTimeMillis();
+                if (l - lastClickTime < 1300) {
+                    finish();
+                } else {
+                    showToast("再点击一次退出");
+                }
+                finish();
+                break;
+//                return true;   //这里由于break会退出，所以我们自己要处理掉 不返回上一层
+
+            case KeyEvent.KEYCODE_SETTINGS: //设置键
+                Log.d(TAG, "setting--->");
+
+                break;
+
+            case KeyEvent.KEYCODE_DPAD_DOWN:   //向下键
+
+                /*    实际开发中有时候会触发两次，所以要判断一下按下时触发 ，松开按键时不触发
+                 *    exp:KeyEvent.ACTION_UP
+                 */
+                if (event.getAction() == KeyEvent.ACTION_DOWN) {
+
+                    Log.d(TAG, "down--->");
+                }
+
+                break;
+
+            case KeyEvent.KEYCODE_DPAD_UP:   //向上键
+                Log.d(TAG, "up--->");
+
+                break;
+
+            case KeyEvent.KEYCODE_DPAD_LEFT: //向左键
+                Log.d(TAG, "left--->");
+                //隐藏按钮
+                btnAnimation(false);
+                button.setVisibility(View.GONE);
+                btnStyle.setVisibility(View.GONE);
+
+                break;
+
+            case KeyEvent.KEYCODE_DPAD_RIGHT:  //向右键
+                Log.d(TAG, "right--->");
+                //显示按钮
+                btnAnimation(true);
+                button.setVisibility(View.VISIBLE);
+                btnStyle.setVisibility(View.VISIBLE);
+
+                break;
+            case KeyEvent.KEYCODE_VOLUME_UP:   //调大声音键
+                Log.d(TAG, "voice up--->");
+
+                break;
+
+            case KeyEvent.KEYCODE_VOLUME_DOWN: //降低声音键
+                Log.d(TAG, "voice down--->");
+
+                break;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
+    /**
+     * 设备管理和展示样式按钮动画
+     *
+     * @param isShow 是否显示
+     */
+    private void btnAnimation(boolean isShow) {
+        Animation animation = AnimationUtils.loadAnimation(mContext, isShow ? R.anim.left_in : R.anim.left_out);
+        button.setAnimation(animation);
+        btnStyle.setAnimation(animation);
+        animation.start();
+    }
+
 
     private void initRecyclerView() {
         manager = new LinearLayoutManager(mContext);
@@ -242,7 +337,7 @@ public class MainActivity extends BaseActivity {
         super.onConfigurationChanged(newConfig);
 
         configration(newConfig);
-        addCanvas();
+//        addCanvas();
         fullScreenChange(isLand);
     }
 
@@ -295,7 +390,7 @@ public class MainActivity extends BaseActivity {
 
         @Override
         public void isPlaying(boolean isplaying) {
-            if (isPlaying == isplaying) {
+            if (isPlaying != isplaying) {
                 showToast("isPlaying " + isPlaying);
                 isPlaying = isplaying;
             }

@@ -2,7 +2,8 @@
 <resources>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent">#1450D4</color>
+    <!--<color name="colorAccent">#D81B60</color>-->
 
     <color name="colorWhite">#ffffffff</color>
     <color name="colorBlack">#000000</color>
@@ -24,7 +25,7 @@
     <!--<color name="backgroud_color">#ffffffff</color>-->
     <color name="bg_common_color">#fff5f5f5</color>
     <color name="ez_login_text_color">#ff848484</color>
-    <color name="top_color">#ca2c32</color>
+    <color name="top_color">#1450D4</color>
     <color name="main_category_first_bg">#92877C</color>
     <color name="main_category_textview_selected">#44111111</color>
     <color name="splite_line_color">#ffc6c6c6</color>
@@ -48,4 +49,9 @@
 
     <color name="front_state_n">#3d3d3d</color>
     <color name="front_state_h">#292929</color>
+
+
+    <color name="blue">#1450D4</color>
+
+
 </resources>

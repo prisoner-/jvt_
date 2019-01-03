@@ -134,5 +134,5 @@
     <string name="nodataerro">No Data</string>
     <string name="searching_device">Searching device...</string>
 
-
+    <string name="add_search_local_device">local device</string>
 </resources>
